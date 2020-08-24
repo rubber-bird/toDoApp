@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 
 import ToDoList from './ToDoList'
+import Header from './Header'
 
 
 class ToDoApp extends Component {
@@ -14,7 +15,10 @@ class ToDoApp extends Component {
 
 	render() {
 		return (
+			<div>
+			<Header numTodo={this.state.tasks.length} />
 			<ToDoList items={this.state.tasks} />
+			</div>
 		)
 	}
 }
